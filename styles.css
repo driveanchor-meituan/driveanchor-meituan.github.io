@@ -1,0 +1,538 @@
+/* DriveAnchor project page — adapted from the Nerfies template (CC BY-SA 4.0). */
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  color: #363636;
+}
+
+.title,
+.subtitle,
+.video-label {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+}
+
+.content {
+  line-height: 1.6;
+}
+
+.footer .icon-link {
+  font-size: 25px;
+  color: #000;
+}
+
+.link-block a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.teaser video {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  border-radius: 10px;
+}
+
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+  color: #555;
+  width: fit-content;
+  margin: 0.5rem auto 0;
+  font-weight: bold;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-links {
+  margin-top: 1rem;
+}
+
+.button .icon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section + .section {
+  padding-top: 0;
+}
+
+#videos {
+  padding-bottom: 3rem;
+}
+
+.title.is-3 {
+  margin-top: 1.5rem;
+}
+
+.title.is-4 {
+  margin-top: 2.5rem;
+}
+
+.content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.figure-caption {
+  margin: 0.75rem auto 0;
+  max-width: 900px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.method-points h3.title {
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.method-points p {
+  margin-bottom: 0.5rem;
+}
+
+/* Tables — booktabs style: top and bottom rules, one rule under the header, no vertical lines */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0.5rem 0 0;
+}
+
+.results-table {
+  width: auto;
+  min-width: 720px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  color: #363636;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.results-table th,
+.results-table td {
+  padding: 0.55em 1.2em;
+  border: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.results-table th:first-child,
+.results-table td:first-child {
+  padding-left: 0.9em;
+  text-align: left;
+}
+
+.results-table thead th {
+  border-top: 2px solid #363636;
+  border-bottom: 1px solid #363636;
+  color: #363636;
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-weight: 600;
+}
+
+.results-table tbody tr:last-child td {
+  border-bottom: 2px solid #363636;
+}
+
+.results-table tbody tr:hover td {
+  background: #fafafa;
+}
+
+.results-table tr.ours td {
+  background: #eef4fb;
+  font-weight: 600;
+}
+
+.results-table tr.ours:hover td {
+  background: #e6eff9;
+}
+
+.results-table tr.group th {
+  padding: 0.9em 0.9em 0.3em;
+  border-top: 1px solid #dbdbdb;
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 600;
+  text-align: left;
+}
+
+.results-table tr.group:first-child th {
+  border-top: 0;
+}
+
+.results-table b {
+  color: #000;
+  font-weight: 700;
+}
+
+.results-table.wide th:nth-child(4),
+.results-table.wide td:nth-child(4) {
+  border-left: 1px solid #dbdbdb;
+}
+
+.results-table.wide tr.group th {
+  border-left: 0;
+}
+
+.results-table:not(.wide) {
+  min-width: 640px;
+}
+
+/* Videos */
+.video-grid {
+  margin-top: 0.5rem;
+}
+
+.video-feature {
+  margin-top: 2.5rem;
+}
+
+.video-feature .video-card {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.video-feature .video-label {
+  font-size: 1rem;
+}
+
+.feature-text .title.is-4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.feature-text .content {
+  text-align: left;
+}
+
+.feature-text .content p {
+  margin-bottom: 0.9rem;
+}
+
+.content ul.feature-facts {
+  margin: 0.5rem 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.feature-facts li {
+  padding-left: 1.1em;
+  margin-bottom: 0.35rem;
+  position: relative;
+}
+
+.feature-facts li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #363636;
+}
+
+.feature-facts b {
+  color: #000;
+  margin-right: 0.3em;
+}
+
+@media (max-width: 768px) {
+  .feature-text .title.is-4,
+  .feature-text .content {
+    text-align: center;
+  }
+  .feature-facts li {
+    text-align: left;
+  }
+  .video-feature .video-card {
+    max-width: 360px;
+  }
+}
+
+.video-card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #000;
+}
+
+/* In-video player chrome (built by static/js/player.js) */
+.player {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+  outline: none;
+}
+
+.player video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.player.is-fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+}
+
+.player.is-fullscreen video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.player-bar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.6rem 0.6rem 0.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
+  color: #fff;
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.player.is-paused .player-bar,
+.player.is-active .player-bar,
+.player:focus-within .player-bar {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .player-bar { opacity: 1; }
+}
+
+.pb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  height: 28px;
+  min-width: 28px;
+  padding: 0 0.3rem;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.pb-btn:hover,
+.pb-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  outline: none;
+}
+
+.pb-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* The full-screen icon is stroke-only; keep it from being filled. */
+.pb-full svg {
+  fill: none;
+}
+
+.pb-seek {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 4px;
+  margin: 0 0.2rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  background: linear-gradient(to right, #fff var(--p, 0%), rgba(255, 255, 255, 0.35) var(--p, 0%));
+  cursor: pointer;
+}
+
+.pb-seek::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.pb-seek::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.pb-seek::-moz-range-track {
+  height: 4px;
+  background: transparent;
+}
+
+.pb-time {
+  flex: none;
+  padding: 0 0.2rem;
+  white-space: nowrap;
+  opacity: 0.95;
+}
+
+.pb-speed {
+  position: relative;
+  flex: none;
+}
+
+.pb-speed-btn {
+  min-width: 2.8em;
+  font-weight: 500;
+}
+
+.pb-speed-menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 6px);
+  display: none;
+  min-width: 4.6em;
+  padding: 0.25rem;
+  border-radius: 8px;
+  background: rgba(20, 20, 20, 0.94);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.pb-speed-menu.is-open {
+  display: block;
+}
+
+.pb-speed-menu button {
+  display: block;
+  width: 100%;
+  padding: 0.3rem 0.7rem;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pb-speed-menu button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.pb-speed-menu button[aria-checked="true"] {
+  font-weight: 600;
+}
+
+.pb-speed-menu button[aria-checked="true"]::before {
+  content: "✓ ";
+}
+
+.pb-speed-menu button[aria-checked="false"]::before {
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+}
+
+.video-label {
+  margin-top: 0.5rem;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer {
+  padding: 2rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .publication-title {
+    font-size: 2rem;
+  }
+  .title.is-4 {
+    margin-top: 2rem;
+  }
+}
+
+/* ---------- Meituan brand theme (public, named version) ---------- */
+:root {
+  --mt-yellow: #FFD100;
+  --mt-yellow-dark: #E6BC00;
+  --mt-amber: #B36B00;
+  --mt-ink: #1a1a1a;
+}
+body { border-top: 6px solid var(--mt-yellow); }
+.brand-strip { display: flex; justify-content: center; margin: 0 0 1.25rem; }
+.brand-logo { height: 44px; width: auto; }
+.publication-title { color: var(--mt-ink); }
+.publication-authors .author-block { margin: 0 0.55rem; }
+.publication-authors .author-block a { color: var(--mt-ink); text-decoration: none; }
+.publication-authors .author-block a:hover { color: var(--mt-amber); }
+
+.publication-affiliations { margin-top: 0.5rem; color: #4a4a4a; }
+.publication-affiliations .author-block { margin: 0 0.6rem; }
+.publication-notes { color: #6a6a6a; margin-top: 0.35rem; }
+.affiliation-logos { display: flex; justify-content: center; align-items: center; gap: 2.25rem; margin: 1.1rem 0 0.9rem; flex-wrap: wrap; }
+.aff-logo { height: 64px; width: auto; }
+.aff-logo-wide { height: 40px; }
+.publication-venue { background: var(--mt-yellow); color: var(--mt-ink); font-weight: 600; border-radius: 999px; padding: 0.15rem 0.9rem; margin: 0.25rem auto 0.75rem; }
+.publication-links .button.is-dark { background: var(--mt-ink); border: 2px solid var(--mt-yellow); }
+.publication-links .button.is-dark:hover { background: var(--mt-yellow); color: var(--mt-ink); }
+.publication-links .button.is-dark:hover svg { stroke: var(--mt-ink); }
+.section .title.is-3 { border-left: 6px solid var(--mt-yellow); padding-left: 0.6rem; }
+.hero.teaser .subtitle .dnerf { color: var(--mt-amber); }
+.footer { border-top: 4px solid var(--mt-yellow); }
+.footer a { color: var(--mt-amber); }

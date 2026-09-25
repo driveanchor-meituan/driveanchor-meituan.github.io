@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DriveAnchor: Progressive Anchor-based Flow Learning for Autonomous Driving Planning. Project page by Meituan, Xi'an Jiaotong University, and Beijing Institute of Technology.">
+  <title>DriveAnchor: Progressive Anchor-based Flow Learning for Autonomous Driving Planning | Meituan</title>
+  <link rel="icon" type="image/svg+xml" href="static/images/car-icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Web fonts load without blocking first paint; system fonts show until they arrive. -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DriveAnchor: Progressive Anchor-based Flow Learning for Autonomous Driving Planning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="mailto:yanlimin03@meituan.com">Limin Yan</a><sup>1*&dagger;</sup></span>
+            <span class="author-block"><a href="mailto:haoyuntang224@163.com">Haoyun Tang</a><sup>1,2*</sup></span>
+            <span class="author-block"><a href="mailto:3120240873@bit.edu.cn">Yutao Qiu</a><sup>1,3</sup></span>
+            <span class="author-block"><a href="mailto:JaimeThomas01@outlook.com">Hongqing Liu</a><sup>1</sup></span>
+            <span class="author-block">Zhandong Mei<sup>2</sup></span>
+            <span class="author-block"><a href="mailto:xuhaoyu06@meituan.com">Haoyu Xu</a><sup>1&sect;</sup></span>
+          </div>
+          <div class="is-size-5 publication-affiliations">
+            <span class="author-block"><sup>1</sup>Meituan</span>
+            <span class="author-block"><sup>2</sup>Xi'an Jiaotong University</span>
+            <span class="author-block"><sup>3</sup>Beijing Institute of Technology</span>
+          </div>
+          <div class="is-size-6 publication-notes"><sup>*</sup>Equal contribution &nbsp;&middot;&nbsp; <sup>&dagger;</sup>Lead corresponding author &nbsp;&middot;&nbsp; <sup>&sect;</sup>Co-corresponding author</div>
+          <div class="affiliation-logos">
+            <img src="assets/logos/meituan.png" alt="Meituan" class="aff-logo aff-logo-wide">
+            <img src="assets/logos/xjtu.png" alt="Xi'an Jiaotong University" class="aff-logo">
+            <img src="assets/logos/bit.png" alt="Beijing Institute of Technology" class="aff-logo">
+          </div>
+          <div class="is-size-5 publication-venue">arXiv preprint &middot; 2026</div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2606.00519" target="_blank" rel="noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/123445992/driveanchor-public.github.io" target="_blank" rel="noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#videos" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 9-14 9z"/></svg></span>
+                  <span>Real-vehicle Videos</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="auto" poster="assets/video_posters/short-lane-change.jpg?v=2" width="880" height="1014">
+        <source src="assets/videos/short-lane-change.mp4?v=3" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">DriveAnchor</span> generates route- and maneuver-compliant trajectories from a shared anchor vocabulary and runs on a real vehicle in urban traffic.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Autonomous-driving planners must generate route- and maneuver-compliant trajectories under a limited decoder-call budget while adapting offline to black-box static-collision feedback. We propose <span class="dnerf">DriveAnchor</span>, a three-stage framework built around a shared vocabulary of recorded trajectories and a continuous trajectory interface. The vocabulary supports flow-matching (FM) residual learning, Energy Field (EF) corridor-conditioned initialization, and anchor-guided zeroth-order reward fine-tuning. The reward update operates in trajectory space without policy likelihoods or reward gradients, enabling offline adaptation of a deterministic decoder.</p>
+          <p>On sampled subsets of nuPlan Val14 and Test14-hard per simulation mode, DriveAnchor achieves the highest reactive scores among the compared methods: 81.50 and 65.74, respectively. We further integrate the trajectory generator into a real vehicle's planning pipeline and demonstrate its operation on urban roads. On 10,000 held-out internal scenarios, under the original non-EF prior and a fixed two-call FM budget, reward fine-tuning reduces short- and long-horizon static candidate collision rates from 27.22% and 56.54% to 2.94% and 7.15%, respectively, and improves 8-s best-of-set minADE from 2.27 to 1.34 m. In a separate junction diagnostic on checkpoints before Stage 3, one and two EF calls raise corridor-guidance satisfaction from 22.10% to 74.13% and 87.92%, respectively. Additional ablations support the benefits of real-trajectory priors and anchor-guided exploration. In real-vehicle tests, trajectory generation takes 2.06 ms on average.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+
+  </div>
+</section>
+
+<section class="section" id="method">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <div class="content">
+          <img src="assets/images/drive-anchor-pipeline.jpg" width="2200" height="1069" loading="lazy" decoding="async" alt="DriveAnchor training and deployment pipeline: anchor vocabulary, three training stages, and on-vehicle deployment">
+          <p class="figure-caption"><b>Figure 1:</b> Overview of DriveAnchor. A shared trajectory vocabulary connects FM residual learning, EF request control, and offline anchor-guided zeroth-order reward adaptation. At deployment the scene is encoded once, EF adjusts the initialization, and FM refines it for the downstream selector.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content method-points">
+          <h3 class="title is-5">Shared trajectory vocabulary</h3>
+          <p>Recorded trajectories provide structured starting points for supervised correction and output-space exploration, preserving multimodality when the deterministic decoder produces similar candidates.</p>
+          <h3 class="title is-5">Progressive training</h3>
+          <p>Stage 1 learns FM residuals from local anchor–ground-truth pairs. Stage 2 learns corridor-conditioned EF initialization jointly with FM. Stage 3 adapts FM with black-box reward feedback while retaining regression.</p>
+          <h3 class="title is-5">Likelihood-free adaptation</h3>
+          <p>Vocabulary neighbors define exploration directions. Reward differences provide a zeroth-order signal in trajectory space, without policy likelihoods or reward gradients.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="results">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiment Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">nuPlan closed-loop evaluation</h3>
+        <div class="content">
+          <p>Official closed-loop score from 0 to 100, higher is better. Val14 and Test14-hard each use a fixed sampled subset of scenarios per simulation mode, and every re-evaluated method uses the same list. DriveAnchor achieves the highest reactive (R) scores on both benchmarks. Under non-reactive (NR) replay it is close to PlanTF on Val14 and below PlanTF and PLUTO on Test14-hard.</p>
+        </div>
+        <div class="table-container">
+          <table class="table results-table">
+            <thead><tr><th>Method</th><th>Val14 NR ↑</th><th>Val14 R ↑</th><th>Test14-hard NR ↑</th><th>Test14-hard R ↑</th></tr></thead>
+            <tbody>
+              <tr><td>PLUTO w/o refine.*</td><td>88.89</td><td>78.11</td><td>70.03</td><td>59.74</td></tr>
+              <tr><td>PlanTF</td><td>84.72</td><td>76.95</td><td>69.70</td><td>61.61</td></tr>
+              <tr><td>UrbanDriver</td><td>68.57</td><td>64.11</td><td>50.40</td><td>49.95</td></tr>
+              <tr><td>STR2-CPKS-800M w/o refine.*</td><td>65.16</td><td>—</td><td>52.57</td><td>—</td></tr>
+              <tr><td>PDM-Open*</td><td>53.53</td><td>54.24</td><td>33.51</td><td>35.83</td></tr>
+              <tr><td>Diffusion-ES w/o LLM</td><td>50.00</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td>GameFormer w/o refine.</td><td>13.32</td><td>8.69</td><td>7.08</td><td>6.69</td></tr>
+              <tr class="ours"><td>DriveAnchor (ours)</td><td>84.80</td><td><b>81.50</b></td><td>63.37</td><td><b>65.74</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="figure-caption"><b>Table 1:</b> nuPlan official closed-loop scores. NR: non-reactive logged-traffic replay. R: reactive simulation with IDM-driven surrounding vehicles. A dash means not reported or not evaluated. An asterisk marks configurations whose input includes a pre-searched reference line or additional proposals.</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Main results on 10,000 held-out scenarios</h3>
+        <div class="content">
+          <p>Candidate metrics are measured before downstream selection. Errors and collision rates are lower-is-better; reward is higher-is-better. At a fixed two-call FM budget, reward fine-tuning lowers short- and long-horizon collision rates and improves minADE@80 under the original prior. EF changes the initialization and adds inference calls.</p>
+        </div>
+        <div class="table-container">
+          <table class="table results-table wide">
+            <thead><tr><th>Metric</th><th>FM×2</th><th>FMRL×2</th><th>EF×1 + FM×1</th><th>EF×1 + FMRL×1</th><th>EF×1 + FMRL×2</th></tr></thead>
+            <tbody>
+              <tr class="group"><th colspan="6">Trajectory accuracy (m)</th></tr>
+              <tr><td>minADE@30 ↓</td><td>0.35</td><td><b>0.25</b></td><td>0.56</td><td>0.28</td><td><b>0.22</b></td></tr>
+              <tr><td>minFDE@30 ↓</td><td>0.80</td><td><b>0.54</b></td><td>1.27</td><td>0.55</td><td><b>0.44</b></td></tr>
+              <tr><td>minADE@80 ↓</td><td>2.27</td><td><b>1.34</b></td><td>2.35</td><td>1.25</td><td><b>0.95</b></td></tr>
+              <tr><td>minFDE@80 ↓</td><td>4.42</td><td><b>2.82</b></td><td>4.44</td><td>2.65</td><td><b>1.87</b></td></tr>
+              <tr class="group"><th colspan="6">Candidate static collision</th></tr>
+              <tr><td>Short-horizon collision ↓</td><td>0.2722</td><td><b>0.0294</b></td><td>0.1313</td><td>0.0423</td><td><b>0.0188</b></td></tr>
+              <tr><td>Long-horizon collision ↓</td><td>0.5654</td><td><b>0.0715</b></td><td>0.2627</td><td>0.1178</td><td><b>0.0873</b></td></tr>
+              <tr class="group"><th colspan="6">Reward</th></tr>
+              <tr><td>Mean reward ↑</td><td>59.22</td><td><b>78.46</b></td><td>70.13</td><td>77.14</td><td><b>78.87</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="figure-caption"><b>Table 2:</b> Main internal results. Collision values are fractions of candidates. Bold marks the best value within each prior group: the original prior (first two columns) and the EF prior (last three).</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Qualitative results</h3>
+        <div class="content">
+          <img src="assets/images/residual-screening.jpg" width="1600" height="1017" loading="lazy" decoding="async" alt="Residual-screened top-50 candidate trajectories at one junction under four configurations">
+          <p class="figure-caption"><b>Figure 2:</b> Residual-screened top-50 candidates before the downstream selector under four configurations at the same junction. These illustrate the candidate subset, not final closed-loop outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="videos">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Real-vehicle Deployment</h2>
+        <div class="content">
+          <p>Anonymized clips from the on-road deployment recording. Each clip shows the front camera above the planner's bird's-eye view. Playback speed can be changed from the control bar inside each clip. The full 41-minute drive is at the bottom.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-multiline is-centered video-grid">
+      <div class="column is-one-third"><div class="video-card"><video controls preload="none" playsinline width="880" height="1014" poster="assets/video_posters/lane-change.jpg?v=2"><source src="assets/videos/lane-change.mp4?v=3" type="video/mp4"></video><p class="video-label">Lane change</p></div></div>
+      <div class="column is-one-third"><div class="video-card"><video controls preload="none" playsinline width="880" height="1014" poster="assets/video_posters/short-lane-change.jpg?v=2"><source src="assets/videos/short-lane-change.mp4?v=3" type="video/mp4"></video><p class="video-label">Short-window lane change</p></div></div>
+      <div class="column is-one-third"><div class="video-card"><video controls preload="none" playsinline width="880" height="1014" poster="assets/video_posters/multi-lane-change.jpg?v=2"><source src="assets/videos/multi-lane-change.mp4?v=3" type="video/mp4"></video><p class="video-label">Multi-lane change</p></div></div>
+      <div class="column is-one-third"><div class="video-card"><video controls preload="none" playsinline width="880" height="1014" poster="assets/video_posters/pedestrian-crossing.jpg?v=2"><source src="assets/videos/pedestrian-crossing.mp4?v=3" type="video/mp4"></video><p class="video-label">Pedestrian crossing</p></div></div>
+      <div class="column is-one-third"><div class="video-card"><video controls preload="none" playsinline width="880" height="1014" poster="assets/video_posters/non-motorized-crossing.jpg?v=2"><source src="assets/videos/non-motorized-crossing.mp4?v=3" type="video/mp4"></video><p class="video-label">Non-motorized road-user crossing</p></div></div>
+      <div class="column is-one-third"><div class="video-card"><video controls preload="none" playsinline width="880" height="1012" poster="assets/video_posters/parallel-left-turn.jpg?v=2"><source src="assets/videos/parallel-left-turn.mp4?v=3" type="video/mp4"></video><p class="video-label">Parallel left turn</p></div></div>
+      <div class="column is-one-third"><div class="video-card"><video controls preload="none" playsinline width="880" height="1012" poster="assets/video_posters/u-turn.jpg?v=2"><source src="assets/videos/u-turn.mp4?v=3" type="video/mp4"></video><p class="video-label">U-turn</p></div></div>
+      <div class="column is-one-third"><div class="video-card"><video controls preload="none" playsinline width="880" height="1012" poster="assets/video_posters/construction-zone.jpg?v=2"><source src="assets/videos/construction-zone-1.mp4?v=3" type="video/mp4"></video><p class="video-label">Construction zone I</p></div></div>
+      <div class="column is-one-third"><div class="video-card"><video controls preload="none" playsinline width="880" height="1010" poster="assets/video_posters/construction-zone-2.jpg?v=2"><source src="assets/videos/construction-zone-2.mp4?v=3" type="video/mp4"></video><p class="video-label">Construction zone II</p></div></div>
+    </div>
+
+    <div class="columns is-centered is-vcentered video-feature">
+      <div class="column is-6 feature-text">
+        <h3 class="title is-4">🌟 41-minute urban drive</h3>
+        <div class="content">
+          <p>This recording covers one on-road test session in urban traffic. DriveAnchor generated the executed trajectories continuously for the whole 41-minute route, and the safety driver did not take over at any point.</p>
+          <p>The route covers a wide range of scenarios: intersections, merging and weaving areas, and lane changes, including short-window lane changes and consecutive multi-lane changes. Along the way the vehicle negotiates with surrounding motor vehicles and yields to crossing pedestrians and non-motorized road users. The eight clips above are excerpts from this recording.</p>
+          <ul class="feature-facts">
+            <li><b>Duration</b> 41 min 39 s</li>
+            <li><b>Manual takeovers</b> 0</li>
+            <li><b>View</b> anonymized front camera (top) and the planner's bird's-eye view with the selected trajectory (bottom)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="column is-5">
+        <div class="video-card">
+          <video controls preload="none" playsinline width="880" height="1014" poster="assets/video_posters/full-deployment.jpg?v=2" aria-label="Full 41-minute deployment drive"><source src="https://github.com/123445992/driveanchor-public.github.io/releases/download/media-v2/full-deployment.mp4" type="video/mp4"></video>
+          <p class="video-label">Full 41-minute deployment drive</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>&copy; 2026 Meituan &middot; Xi'an Jiaotong University &middot; Beijing Institute of Technology. Correspondence: <a href="mailto:yanlimin03@meituan.com">yanlimin03@meituan.com</a>.</p>
+          <p>This website is adapted from the <a href="https://nerfies.github.io" target="_blank" rel="noreferrer">Nerfies</a> project page template, licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="static/js/player.js" defer></script>
+</body>
+</html>
