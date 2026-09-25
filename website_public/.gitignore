@@ -1,0 +1,8 @@
+.DS_Store
+
+# GitHub repositories reject files above 100 MB. Publish this file as a
+# GitHub Release asset and update its source URL in index.html before launch.
+assets/videos/full-deployment.mp4
+
+# Unused source media and intermediate frames are not part of the public site.
+assets/video_frames/
