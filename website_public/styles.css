@@ -514,7 +514,7 @@ body {
   --mt-amber: #B36B00;
   --mt-ink: #1a1a1a;
 }
-body { border-top: 6px solid var(--mt-yellow); }
+body { border-top: 0; }
 .brand-strip { display: flex; justify-content: center; margin: 0 0 1.25rem; }
 .brand-logo { height: 44px; width: auto; }
 .publication-title { color: var(--mt-ink); }
@@ -528,11 +528,11 @@ body { border-top: 6px solid var(--mt-yellow); }
 .affiliation-logos { display: flex; justify-content: center; align-items: center; gap: 2.25rem; margin: 1.1rem 0 0.9rem; flex-wrap: wrap; }
 .aff-logo { height: 64px; width: auto; }
 .aff-logo-wide { height: 40px; }
-.publication-venue { background: var(--mt-yellow); color: var(--mt-ink); font-weight: 600; border-radius: 999px; padding: 0.15rem 0.9rem; margin: 0.25rem auto 0.75rem; }
-.publication-links .button.is-dark { background: var(--mt-ink); border: 2px solid var(--mt-yellow); }
-.publication-links .button.is-dark:hover { background: var(--mt-yellow); color: var(--mt-ink); }
-.publication-links .button.is-dark:hover svg { stroke: var(--mt-ink); }
-.section .title.is-3 { border-left: 6px solid var(--mt-yellow); padding-left: 0.6rem; }
+.publication-venue { color: #555; font-weight: 600; margin: 0.25rem auto 0.75rem; }
+.publication-links .button.is-dark { background: var(--mt-ink); border: 0; }
+.publication-links .button.is-dark:hover { background: #4a4a4a; color: #fff; }
+.publication-links .button.is-dark:hover svg { stroke: #fff; }
+.section .title.is-3 { border-left: 0; padding-left: 0; }
 .hero.teaser .subtitle .dnerf { color: var(--mt-amber); }
-.footer { border-top: 4px solid var(--mt-yellow); }
+.footer { border-top: 1px solid #e5e5e5; }
 .footer a { color: var(--mt-amber); }
