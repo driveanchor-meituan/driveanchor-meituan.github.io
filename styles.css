@@ -525,7 +525,7 @@ body { border-top: 0; }
 .publication-affiliations { margin-top: 0.5rem; color: #4a4a4a; }
 .publication-affiliations .author-block { margin: 0 0.6rem; }
 .publication-notes { color: #6a6a6a; margin-top: 0.35rem; }
-.affiliation-logos { display: flex; justify-content: center; align-items: center; gap: 2.25rem; margin: 1.1rem 0 0.9rem; flex-wrap: wrap; }
+.affiliation-logos { display: flex; justify-content: center; align-items: center; gap: 2.25rem; margin: 0 0 1.6rem; flex-wrap: wrap; }
 .aff-logo { height: 64px; width: auto; }
 .aff-logo-wide { height: 40px; }
 .publication-venue { color: #555; font-weight: 600; margin: 0.25rem auto 0.75rem; }
